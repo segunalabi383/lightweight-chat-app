@@ -9,17 +9,7 @@ interface Message {
 
 export default function Home() {
   const [prompt, setPrompt] = useState('')
-  const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'This is test' },
-    { role: 'user', content: 'This is test 2' },
-    { role: 'assistant', content: 'This is test 3' },
-    { role: 'user', content: 'This is test 4' },
-    { role: 'assistant', content: 'This is test 5' },
-    { role: 'user', content: 'This is test 6' },
-    { role: 'assistant', content: 'This is test 7' },
-    { role: 'user', content: 'This is test 8' },
-    { role: 'assistant', content: 'This is test 9' },
-  ])
+  const [messages, setMessages] = useState<Message[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const chatHistoryRef = useRef<HTMLDivElement>(null)
